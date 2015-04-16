@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang='en'>
     <head>
-        <title>Title Here - The Boston Globe</title>
-        @@include('components/meta.html')
+        @@include('components/meta.html', {
+            'title': 'Graphic title',
+            'description': ''
+            'keywords': '',
+            'url': 'http://apps.bostonglobe.com/',
+            'img': 'http://apps.bostonglobe.com/'
+        })
 
         <!-- js to load fonts async -->
         <script src='http://apps.bostonglobe.com/common/js/load-fonts/load-fonts-0.0.2.js' type='text/javascript'></script>
@@ -36,7 +41,8 @@
         <script src='js/main.js' type='text/javascript'></script>
         <!-- endsmoosh -->
 
-        @@include('components/omniture.html')
+        @@include('components/omniture.html', { 'title': 'Section | Graphic title', 'section': 'Metro' })
+        @@include('components/chartbeat.html', { 'section': 'metro' })
 
     </body>
 </html>
