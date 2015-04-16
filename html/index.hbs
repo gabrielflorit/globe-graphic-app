@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang='en'>
     <head>
-        @@include('components/meta.html', {
-            'title': 'Graphic title',
-            'description': ''
-            'keywords': '',
-            'url': 'http://apps.bostonglobe.com/',
-            'img': 'http://apps.bostonglobe.com/'
+        @@include("../components/meta.html", {
+            "title": "Graphic title",
+            "description": "",
+            "keywords": "",
+            "url": "http://apps.bostonglobe.com/",
+            "img": "http://apps.bostonglobe.com/"
         })
 
         <!-- js to load fonts async -->
@@ -29,9 +29,9 @@
 
     </head>
     <body>
-        @@include('components/header.html', {'color': 'dark' })
+        @@include("../components/header.html", {"color": "dark" })
         <div id='globe-graphic-container' class='typeset'>
-
+        <p>hey</p>
         </div>
 
         <!-- js libs -->
@@ -41,8 +41,10 @@
         <script src='js/main.js' type='text/javascript'></script>
         <!-- endsmoosh -->
 
-        @@include('components/omniture.html', { 'title': 'Section | Graphic title', 'section': 'Metro' })
-        @@include('components/chartbeat.html', { 'section': 'metro' })
+        <!-- analytics (MUST UNCOMMENT)
+        @@include("../components/omniture.html", { "title": "Section | Graphic title", "section": "Metro" })
+        @@include("../components/chartbeat.html", { "section": "metro" })
+        -->
 
     </body>
 </html>
