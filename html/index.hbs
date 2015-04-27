@@ -2,11 +2,11 @@
 <html lang='en'>
     <head>
         @@include("../components/meta.html", {
-            "title": "Graphic title",
-            "description": "",
-            "keywords": "",
-            "url": "http://apps.bostonglobe.com/",
-            "img": "http://apps.bostonglobe.com/"
+            "title": "{{meta.title}}",
+            "description": "{{meta.description}}",
+            "keywords": "{{meta.keywords}}",
+            "url": "{{meta.url}}",
+            "img": "{{meta.image_url}}"
         })
 
         <!-- js to load fonts async -->
@@ -41,9 +41,18 @@
         <script src='js/main.js' type='text/javascript'></script>
         <!-- endsmoosh -->
 
-        <!-- analytics -->
-        @@include("../components/omniture.html", { "title": "Section | Graphic title", "section": "Metro" })
-        @@include("../components/chartbeat.html", { "section": "metro" })
+        <!-- meter --> 
+        <script src='http://www.bostonglobe.com/js/metercheck.js' type='text/javascript'></script>
+        <script>
+            var methode = {};
+            bglobe.freeviewMeter.init({pageId : '{{meta.page_id}}' , registrationWall : 'non-exempt', webType : 'app', sectionPath : 'apps', debug: false });
+        </script>
 
+        {{#unless dev}}
+            <!-- analytics -->
+            @@include("../components/omniture.html", { "title": "{{meta.section_cap}} | {{meta.title}}", "section": "{{meta.section_cap}}" })
+            @@include("../components/chartbeat.html", { "section": "{{meta.section_lower}}" })
+        {{/unless}}
     </body>
+}
 </html>
