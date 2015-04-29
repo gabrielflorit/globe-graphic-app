@@ -52,6 +52,6 @@ function loadCSS( href, before, media, callback ){
 }
 
 // Globe apps style reset and basic style guide
-loadCSS('http://apps.bostonglobe.com/common/css/base/base-1.0.1.css');
+loadCSS('http://apps.bostonglobe.com/common/css/base/base-1.2.0.css');
 // Globe reusable components style
-loadCSS('http://apps.bostonglobe.com/common/css/components/components-0.1.0.css');
+loadCSS('http://apps.bostonglobe.com/common/css/components/components-0.2.0.css');
