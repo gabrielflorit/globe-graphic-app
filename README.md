@@ -3,7 +3,7 @@
 To be used as an extension to [globe graphic template](https://github.com/russellgoldenberg/globe-graphic-template).
 
 ## Setup
-The app uses handlebars to precompile to HTML. All HTML should be be placed in **src/html/index.hbs**.
+The app uses handlebars to precompile to HTML. All HTML should be be placed in **src/html/partials/partial-graphic.hbs**.
 
 #### Copy
 Using a shared google doc for all copy is recommended. The app uses [ArchieML](http://archieml.org) as a micro CMS. To setup:
@@ -23,7 +23,6 @@ If the data is too sensitive or a google doc is overkill, you can update **src/d
 
 ```json
 {
-	'dev': true,
 	'title': 'Graphic title',
 	'description': 'Description of graphic',
 	'keywords': 'Comma, delimited, for, seo',
@@ -32,6 +31,7 @@ If the data is too sensitive or a google doc is overkill, you can update **src/d
 	'page_id': 'apps.mmddyy.title-no-spaces',
 	'section_cap': 'Metro',
 	'section_lower': 'metro',
+	'header_color': '',
 	'credits': [{
 		'role': 'Development',
 		'name': 'Russell Goldenberg'
@@ -43,5 +43,5 @@ If the data is too sensitive or a google doc is overkill, you can update **src/d
 ```
 
 ## Deploy
-- Be sure to remove 'dev' from the your google doc / copy.json file
+- Uncomment the **partial-analytics** in **src/html/index.hbs**
 - Run `gulp prod` to deploy

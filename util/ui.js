@@ -2,8 +2,8 @@
     var init = function() {
         setupSocial({
             element: {
-                facebook: 'share-facebook',
-                twitter: 'share-twitter'
+                facebook: 'share-fb',
+                twitter: 'share-tw'
             }
         });
 
@@ -46,7 +46,8 @@
     var copyrightYear = function() {
         var d = new Date();
         var year = d.getFullYear();
-        document.getElementsByClassName('g-footer--copright-year')[0].innerText = year;
+        var el = document.getElementsByClassName('g-footer--copyright-year')[0];
+        el.innerText = year;
     };
 
     var isMobile = { 
@@ -57,4 +58,6 @@
         Windows: function() { return navigator.userAgent.match(/IEMobile/i); }, 
         any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
     };
+
+    init();
 })();
