@@ -6,22 +6,23 @@ To be used as an extension to [globe graphic template](https://github.com/russel
 The app uses handlebars to precompile to HTML. All HTML should be be placed in **src/html/partials/partial-graphic.hbs**.
 
 #### Copy
-Using a shared google doc for all copy is recommended. The app uses [ArchieML](http://archieml.org) as a micro CMS. To setup:
+Using a shared google doc for all copy is recommended. The app uses [ArchieML](http://archieml.org) as a micro CMS.
 
-*Setup*
+*Setup google doc*
 - Create a google doc (outside of Globe domain)
-- Publish to web (file -> publish to web)
-- Make public: (Blue share button -> Advanced -> change "private only you can access" to "public on the web")
-- In the address bar, grab the ID (https://docs.google.com/document/d/**1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0**/edit)
+- Publish to web: file -> publish to web
+- Make public: share button -> advanced -> change "private only you can access" to "public on the web"
+- In the address bar, grab the ID
+	- ...com/document/d/ **1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0** /edit
 - In **copy.js** paste in the ID
 
-*Run*
+*Run archie*
 - To get the latest copy, run `node copy.js` in root
-- This will update **src/data/copy.json** which is where **src/html/index.hbs** pulls from
+- This will update **src/data/copy.json** which is handlebars pulls from
 
 If the data is too sensitive or a google doc is overkill, you can update **src/data/copy.json** directly. The following snippet is a bare minimum needed to fill out the basic information for seo and analytics:
 
-```json
+```
 {
 	'title': 'Graphic title',
 	'description': 'Description of graphic',
