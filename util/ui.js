@@ -8,6 +8,7 @@
         });
 
         removeMobileHover();
+        copyrightYear();
     };
 
     var setupSocial = function(params) {
@@ -40,6 +41,12 @@
                 }
             }
         }
+    };
+
+    var copyrightYear = function() {
+        var d = new Date();
+        var year = d.getFullYear();
+        document.getElementsByClassName('g-footer--copright-year')[0].innerText = year;
     };
 
     var isMobile = { 
