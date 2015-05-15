@@ -47,7 +47,7 @@
         var d = new Date();
         var year = d.getFullYear();
         var el = document.getElementsByClassName('g-footer--copyright-year')[0];
-        el.innerText = year;
+        el.innerHTML = year;
     };
 
     var isMobile = { 
