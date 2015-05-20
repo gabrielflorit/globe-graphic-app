@@ -23,7 +23,7 @@
 
     var removeMobileHover = function() {
         // Inspired by: https://gist.github.com/rcmachado/7303143 and http://mvartan.com/2014/12/20/fixing-sticky-hover-on-mobile-devices/
-        if(!isMobile.any()) {
+        if(isMobile.any()) {
             // Loop through each stylesheet
             for(var sheetI = document.styleSheets.length - 1; sheetI >= 0; sheetI--) {
                 var sheet = document.styleSheets[sheetI];
