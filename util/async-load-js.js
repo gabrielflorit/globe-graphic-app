@@ -11,8 +11,3 @@ function loadJS( src, cb ){
 	}
 	return script;
 }
-
-loadJS('http://apps.bostonglobe.com/common/js/svg-injector/svg-injector-1.1.3.min.js', function() {
-    var mySVGsToInject = document.querySelectorAll('img.inject');
-    SVGInjector(mySVGsToInject);
-});

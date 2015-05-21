@@ -44,5 +44,4 @@ If the data is too sensitive or a google doc is overkill, you can update **src/d
 ```
 
 ## Deploy
-- Uncomment the **partial-analytics** in **src/html/index.hbs**
 - Run `gulp prod` to deploy
