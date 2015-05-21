@@ -24,21 +24,21 @@ If the data is too sensitive or a google doc is overkill, you can update **src/d
 
 ```
 {
-	'title': 'Graphic title',
-	'description': 'Description of graphic',
-	'keywords': 'Comma, delimited, for, seo',
-	'url': 'http://apps.bostonglobe.com/graphics/path/to/graphic',
-	'image_url': 'http://apps.bostonglobe.com/graphics/path/to/image',
-	'page_id': 'apps.mmddyy.title-no-spaces',
-	'section_cap': 'Metro',
-	'section_lower': 'metro',
-	'header_color': '',
-	'credits': [{
-		'role': 'Development',
-		'name': 'Russell Goldenberg'
+	"title": "Graphic title",
+	"description": "Description of graphic",
+	"keywords": "Comma, delimited, for, seo",
+	"url": "http://apps.bostonglobe.com/graphics/path/to/graphic",
+	"image_url": "http://apps.bostonglobe.com/graphics/path/to/image",
+	"page_id": "apps.mmddyy.title-no-spaces",
+	"section_cap": "Metro",
+	"section_lower": "metro",
+	"header_color": "",
+	"credits": [{
+		"role": "Development",
+		"name": "Russell Goldenberg"
 	}, {
-		'role': 'Design',
-		'name': 'Elaina Natario'
+		"role": "Design",
+		"name": "Elaina Natario"
 	}]
 }
 ```
